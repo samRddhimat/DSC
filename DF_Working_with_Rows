@@ -1,0 +1,25 @@
+/*
+    ***use of at instead of loc  & iloc
+    
+    *** Context based
+*/
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame(columns={'a','b'})
+for i in range(0,6):
+    df.at[i,'a'] = i
+    df.at[i,'b'] = i + 1
+
+df
+
+#################
+# 
+df = pd.DataFrame(data=np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), index= [2, 'A', 4], columns=[48, 49, 50])
+df
+
+### 7, 8, 9
+print(df.loc[4])
+
+### 4, 5, 6
+print(df.iloc[1])
